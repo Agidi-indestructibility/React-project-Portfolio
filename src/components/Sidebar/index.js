@@ -72,7 +72,7 @@ const Sidebar = () => {
       <ul>
         <li>
           <a
-            href="https://www.linkedin.com/in/slobodan-gaji%C4%87-006bb8b8/"
+            href="https://www.linkedin.com/in/Ojima Caleb/"
             target="_blank"
             rel="noreferrer"
           >
@@ -98,7 +98,7 @@ const Sidebar = () => {
         </li>
         <li>
           <a
-            href="https://www.youtube.com/channel/UCBu5ulO4d-d47lAVybpRTkw"
+            href="https://www.youtube.com"
             rel="noreferrer"
             target="_blank"
           >
@@ -110,7 +110,7 @@ const Sidebar = () => {
           </a>
         </li>
         <li>
-          <a href="skype:live:bobangajicsm" rel="noreferrer" target="_blank">
+          <a href="skype:live:32050bfcde76a394" rel="noreferrer" target="_blank">
             <FontAwesomeIcon
               icon={faSkype}
               color="#4d4d4e"

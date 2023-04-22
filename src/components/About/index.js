@@ -16,10 +16,15 @@ const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
   useEffect(() => {
-    return setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-  }, [])
+    const timer = setTimeout(() => {
+        setLetterClass('text-animate-hover');
+    }, 3000);
+
+    return () => {
+        clearTimeout(timer);
+    }
+  });
+
 
   return (
     <>
@@ -28,23 +33,43 @@ const About = () => {
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
+              strArray= {['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
               idx={15}
             />
           </h1>
           <p>
-            I'm a very ambitious front-end developer looking for a role in an
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
+            I am a highly ambitious front-end developer in search of a challenging role within an 
+            established IT organization that offers the prospect of working with cutting-edge 
+            technologies on a diverse range of projects.
           </p>
           <p align="LEFT">
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops, one design problem at a time.
+            I possess a calm and composed disposition, coupled with an innate inquisitiveness that 
+            drives me to continuously refine my skills and tackle design challenges one step 
+            at a time.
           </p>
           <p>
-            If I need to define myself in one sentence that would a fantastic
-            person, a sports fanatic,
-            electronic enthusiast, and tech-obsessed!!!
+            If I were to encapsulate my persona within a single statement, I would describe myself as
+            an outstanding individual with a passion for sports, electronics, and technology.
+          </p>
+          <p>
+          My focus on front-end development has allowed me to cultivate a deep understanding of design
+          principles and user experience, enabling me to create visually appealing and intuitive 
+          websites that meet the needs of users.
+
+          As an ambitious individual, I'm always seeking opportunities to expand my skill set and take
+          on new challenges. I am eager to collaborate with like-minded professionals in a dynamic and
+          fast-paced environment, where I can make a meaningful contribution to the success of the
+          organization.
+
+          In my leisure time, I am a sports fanatic, regularly engaging in physical activities to 
+          maintain my fitness levels. I also have a keen interest in electronic gadgets, constantly
+          exploring new and innovative technologies that shape our lives.
+
+          Overall, I believe that my passion for technology, coupled with my hardworking and curious
+          personality, make me an excellent fit for a role in a leading IT organization.
+          </p>
+          <p>
+
           </p>
         </div>
 

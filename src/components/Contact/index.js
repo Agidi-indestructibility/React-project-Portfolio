@@ -11,10 +11,15 @@ const Contact = () => {
   const form = useRef()
 
   useEffect(() => {
-    return setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-  }, [])
+    const timer = setTimeout(() => {
+        setLetterClass('text-animate-hover');
+    }, 3000);
+
+    return () => {
+        clearTimeout(timer);
+    }
+  });
+
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -45,9 +50,9 @@ const Contact = () => {
             <br />
           </h1>
           <p>
-            I am interested in freelance opportunities - especially on ambitious
-            or large projects. However, if you have any other requests or
-            questions, don't hesitate to contact me using below form either.
+          I have a keen interest in freelance opportunities, particularly on challenging and sizeable
+          projects. Nevertheless, if you have any other inquiries or requests,
+          please do not hesitate to reach out to me through the form provided below.
           </p>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
