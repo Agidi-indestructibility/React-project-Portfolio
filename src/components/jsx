@@ -1,0 +1,13 @@
+import React from 'react';
+import './App.scss';
+
+function App() {
+  return (
+    <div className="container">
+      <h1>Hello, World!</h1>
+      <p>This is a responsive React app.</p>
+    </div>
+  );
+}
+
+export default App;

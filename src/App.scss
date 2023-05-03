@@ -48,3 +48,26 @@ textarea {
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  flex: 0 0 calc(25% - 10px);
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .item {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .item {
+    flex-basis: 100%;
+  }
+}
+
